@@ -21,7 +21,7 @@ public class Main {
             pathToFile = args[0];
             reader1 = new BufferedReader(new FileReader(pathToFile));
         } else {
-            pathToFile = Main.class.getResource("/emails.csv").toURI().getPath();
+            pathToFile = Main.class.getResource("/emails.csv").toURI().toString();
             reader1 = new BufferedReader(new InputStreamReader(Main.class.getResourceAsStream("/emails.csv")));
         }
 
