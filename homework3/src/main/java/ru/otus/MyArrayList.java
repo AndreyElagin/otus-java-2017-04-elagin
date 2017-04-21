@@ -7,7 +7,6 @@ import java.util.*;
  */
 public class MyArrayList<T> implements List<T> {
     public T[] array;
-    private Iterator<T> iterator;
     private int size;
 
     @SuppressWarnings("unchecked")
@@ -45,19 +44,7 @@ public class MyArrayList<T> implements List<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return new Iterator<T>() {
-            int pos;
-
-            @Override
-            public boolean hasNext() {
-                return pos < size;
-            }
-
-            @Override
-            public T next() {
-                return array[pos++];
-            }
-        };
+        return listIterator();
     }
 
     @Override

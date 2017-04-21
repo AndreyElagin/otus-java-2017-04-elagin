@@ -20,51 +20,39 @@ public class Main {
         }
 
         System.out.println("Benchmark for ArrayList on addAll method");
-        benchmark(() -> {
-            Collections.addAll(arrayList, arr);
-        });
+        benchmark(() -> Collections.addAll(arrayList, arr));
 
         System.gc();
         Thread.sleep(10);
 
         System.out.println("Benchmark for MyArrayList on addAll method");
-        benchmark(() -> {
-            Collections.addAll(myArrayList, arr);
-        });
+        benchmark(() -> Collections.addAll(myArrayList, arr));
 
         System.out.println("\n");
         System.gc();
         Thread.sleep(10);
 
         System.out.println("Benchmark for ArrayList on copy method");
-        benchmark(() -> {
-            Collections.copy(arrayList, myArrayList);
-        });
+        benchmark(() -> Collections.copy(arrayList, myArrayList));
 
         System.gc();
         Thread.sleep(10);
 
         System.out.println("Benchmark for MyArrayList on copy method");
-        benchmark(() -> {
-            Collections.copy(myArrayList, arrayList);
-        });
+        benchmark(() -> Collections.copy(myArrayList, arrayList));
 
         System.out.println("\n");
         System.gc();
         Thread.sleep(10);
 
         System.out.println("Benchmark for ArrayList on sort method");
-        benchmark(() -> {
-            Collections.sort(arrayList);
-        });
+        benchmark(() -> Collections.sort(arrayList));
 
         System.gc();
         Thread.sleep(10);
 
         System.out.println("Benchmark for MyArrayList on sort method");
-        benchmark(() -> {
-            Collections.sort(myArrayList);
-        });
+        benchmark(() -> Collections.sort(myArrayList));
 
     }
 
